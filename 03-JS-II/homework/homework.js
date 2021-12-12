@@ -101,7 +101,12 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  return numero % Math.floor(numero) === 0;
+  if (numero === 0) {
+    return true;
+  } else {
+    return numero % Math.floor(numero) === 0;
+  }
+
 
 }
 
@@ -114,7 +119,10 @@ function fizzBuzz(numero) {
     return "fizz";
   } else if (numero % 5 === 0) {
     return "buzz";
-  } else {
+  } else if (numero % 5 === 0 && numero % 3 === 0) {
+    return "fizzbuzz";
+  }
+  else {
     return numero;
   }
 }
@@ -126,13 +134,13 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-  if (num1 > num2 && num3 && 0) {
+  if (num1 > num2 && num1 > num3 && num1 > 0) {
     return "Número 1 es mayor y positivo";
   } else if (num1 < 0 || num2 < 0 || num3 < 0) {
     return "Hay negativos";
-  } else if (num3 > num2 && num1) {
+  } else if (num3 > num2 && num3 > num1) {
     return num3++;
-  } else if (num1 || num2 || num3 === 0) {
+  } else if (num1 === 0 || num2 === 0 || num3 === 0) {
     return "Error";
   } else {
     return false;
@@ -179,7 +187,7 @@ function tablaDelSeis() {
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí  
   var array = []
-  for (let i = 1; i < 11; i++) {
+  for (let i = 0; i < 11; i++) {
     array.push(i * 6);
 
   }
@@ -189,7 +197,7 @@ function tablaDelSeis() {
 function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  return numero.length === 3;
+  return toString(numero).length === 3;
 }
 
 function doWhile(numero) {
