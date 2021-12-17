@@ -1,0 +1,17 @@
+h1 {
+    color: yellowgreen;
+}
+img {
+    width: 400px;
+}
+#thirdDiv{
+    width: 500px;
+    height: 600px;
+    background-color: tomato;
+    padding: 50px;
+    border: 2px solid violet;
+}
+#spanId{
+    font-size: 18px;
+    margin: 50px;
+}
